@@ -1,4 +1,22 @@
 @charset "UTF-8";
+header a {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 8px solid transparent;
+  background-color: #202020;
+  color: initial;
+}
+header a:hover {
+  background-color: #0056b3;
+  color: white;
+  border-color: #FFFFFF;
+}
+
 body {
   background-color: #0E0D13;
   margin: 0;
@@ -9,80 +27,54 @@ body {
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-  padding: 20px;
-}
-header a {
-  display: block;
-  padding: 12px 20px;
-  margin: 10px 0;
-  text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  border: 8px solid transparent;
-  background-color: #202020;
-  color: initial;
-  font-size: 24px;
-  color: initial;
-}
-header a:hover {
-  background-color: #0056b3;
-  color: white;
-  border-color: #FFFFFF;
+  padding: 1.25rem;
 }
 header .inicio {
-  font-size: 28px;
+  font-size: 1.75rem;
   color: #FFFFFF;
 }
 header .tipo1 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #00BFFF;
 }
 header .tipo2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #FFDF61;
 }
 header .tipo3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #B300FF;
 }
 header .otras {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #40E0D0;
 }
 
-body.horizontal header {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-direction: row;
+body.inicio header {
+  flex-direction: column;
 }
-body.horizontal header a {
+
+body:not(.inicio) header {
+  flex-direction: column;
+  align-items: flex-start;
+}
+body:not(.inicio) header a {
   display: inline-block;
+  margin: 0.625rem 0.625rem 0.625rem 0;
 }
 
 .contenido {
-  margin-top: 20px;
+  margin: 20px 0 0 20px;
   padding-top: 20px;
-  margin-left: 20px;
-}
-
-footer .contenido {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  max-width: 100%;
-  padding: 20px;
-  margin: 0 auto;
 }
 
 .imagenKardashev {
   width: 159px;
   height: auto;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   height: 240px;
 }
 
@@ -94,112 +86,186 @@ footer .contenido {
   box-sizing: border-box;
 }
 
-.imagenDeLado1 {
+body.horizontal header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-direction: row;
+}
+
+h1 {
+  font-size: 23px;
+  margin: 60px 0 40px 20px;
+}
+
+main p:not([class]) {
+  font-size: 22px;
+  margin: 0px 2.5rem 1.25rem;
+}
+
+.imagenTipo1 img, .imagenTipo2 img, .imagenTipo3 img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.imagenDeLado, .imagenDeLado1, .imagenDeLado2 {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   padding-top: 10px;
   flex-wrap: wrap;
 }
-.imagenDeLado1 img {
+.imagenDeLado img, .imagenDeLado1 img, .imagenDeLado2 img {
   width: 200px;
   height: auto;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
-.imagenDeLado1 p {
+.imagenDeLado p, .imagenDeLado1 p, .imagenDeLado2 p {
   flex: 1;
   font-size: 22px;
   line-height: 1.6;
   margin: 0;
 }
 
-.imagenDeLado2 {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin: 20px;
-  padding-top: 10px;
-  flex-wrap: wrap;
-}
-.imagenDeLado2 img {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.imagenDeLado2 p {
-  flex: 1;
-  font-size: 22px;
-  line-height: 1.6;
-  margin: 0;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  grid-template-rows: auto auto; /* Dos filas automáticas */
+  gap: 20px; /* Espaciado entre las imágenes */
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
 
-.imagenDeLado {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin: 20px;
-  padding-top: 10px;
-  flex-wrap: wrap;
-}
-.imagenDeLado img {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.imagenDeLado p {
-  flex: 1;
-  font-size: 22px;
-  line-height: 1.6;
-  margin: 0;
+.imagenCivilización4, .imagenCivilización5, .imagenTierra {
+  position: relative; /* Necesario para colocar el texto sobre las imágenes */
 }
 
+.textoImagen {
+  position: absolute; /* El texto se posiciona sobre la imagen */
+  top: 10px; /* Distancia desde la parte superior de la imagen */
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajuste para centrar perfectamente */
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  font-weight: bold; /* Estilo en negrita */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar legibilidad */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro para el texto */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Estilos para las imágenes, se ajustan a la pantalla */
+.imagenCivilización4 img, .imagenCivilización5 img, .imagenTierra img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.imagenCivilización4 img, .imagenCivilización5 img {
+  margin-bottom: 15px; /* Separa la imagen del texto debajo */
+}
+
+/* El contenedor de la Tierra ocupa ambas columnas */
+.imagenTierra {
+  grid-column: span 2; /* Ocupa ambas columnas */
+}
+
+.imagenTierra img {
+  margin-top: 15px; /* Ajusta el espacio si es necesario */
+}
+
+/* Ajustes para la imagen "Tierra" que hace que sea más grande */
+.imagenCivilización4, .imagenCivilización5 {
+  grid-row: 1; /* Coloca estas imágenes en la fila superior */
+}
+
+.imagenTierra {
+  grid-row: 2; /* Coloca la imagen de la Tierra en la fila inferior */
+}
+
+/* Mixin para los botones */
+.boton {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 8px solid transparent;
+  background-color: #202020;
+  color: initial;
+}
+.boton:hover {
+  background-color: #0056b3;
+  color: white;
+  border-color: #FFFFFF;
+}
+.boton.inicio {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.boton.tipo2 {
+  font-size: 24px;
+  color: #FFDF61;
+}
+.boton.tipo3 {
+  font-size: 24px;
+  color: #B300FF;
+}
+.boton.otras {
+  font-size: 24px;
+  color: #40E0D0;
+}
+
+@media only screen and (max-width: 800px) {
+  .imagentipo1, .imagenTipo2, .imagenTipo3 {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .imagentipo1 img, .imagenTipo2 img, .imagenTipo3 img {
+    max-width: 95%;
+    padding: 20px 0;
+  }
+}
 @media only screen and (max-width: 414px) {
-  .grid-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .imagenCivilización4 {
-    width: 90%;
-    max-width: 350px;
-    text-align: center;
-  }
-  .imagenCivilización4 img {
-    width: 100%;
-    object-fit: contain;
-  }
-  .imagenCivilización5 {
-    width: 90%;
-    max-width: 350px;
-    text-align: center;
-  }
-  .imagenCivilización5 img {
-    width: 100%;
-    object-fit: contain;
-  }
-  .imagenTierra {
-    width: 90%;
-    max-width: 350px;
-    text-align: center;
-  }
-  .imagenTierra img {
-    width: 100%;
-    object-fit: contain;
-  }
-  .imagenDeLado, .imagenDeLado1, .imagenDeLado2 {
+  /* Mantiene imagen arriba y texto abajo en imagenDeLado1 */
+  .imagenDeLado1 {
     flex-direction: column;
     align-items: flex-start;
   }
-  .imagenDeLado img, .imagenDeLado1 img, .imagenDeLado2 img {
+  .imagenDeLado1 img {
     width: 150px;
+    align-self: flex-start;
   }
-  .imagenDeLado p, .imagenDeLado1 p, .imagenDeLado2 p {
+  .imagenDeLado1 p {
     font-size: 18px;
+    align-self: flex-start;
+  }
+  /* Asegura que en imagenDeLado2 la imagen esté arriba y el texto abajo */
+  .imagenDeLado2 {
+    flex-direction: column; /* Se mantiene en columna */
+    align-items: flex-start;
+  }
+  .imagenDeLado2 img {
+    width: 150px;
+    align-self: flex-start;
+    order: -1; /* Esto mueve la imagen arriba en el orden */
+  }
+  .imagenDeLado2 p {
+    font-size: 18px;
+    align-self: flex-start;
   }
 }
 
