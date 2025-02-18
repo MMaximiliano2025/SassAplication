@@ -17,12 +17,67 @@ header a:hover {
   border-color: #FFFFFF;
 }
 
+@media only screen and (max-width: 800px) {
+  .imagentipo1, .imagenTipo2, .imagenTipo3 {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .imagentipo1 img, .imagenTipo2 img, .imagenTipo3 img {
+    max-width: 95%;
+    padding: 20px 0;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .imagenDeLado1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .imagenDeLado1 img {
+    width: 150px;
+    align-self: flex-start;
+  }
+  .imagenDeLado1 p {
+    font-size: 18px;
+    align-self: flex-start;
+  }
+  .imagenDeLado2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .imagenDeLado2 img {
+    width: 150px;
+    align-self: flex-start;
+    order: -1;
+  }
+  .imagenDeLado2 p {
+    font-size: 18px;
+    align-self: flex-start;
+  }
+}
 body {
   background-color: #0E0D13;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   color: white;
+}
+
+h1 {
+  font-size: 23px;
+  margin: 60px 0 40px 20px;
+}
+
+main p:not([class]) {
+  font-size: 22px;
+  margin: 0px 2.5rem 1.25rem;
+}
+
+body.horizontal header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-direction: row;
 }
 
 header {
@@ -33,7 +88,7 @@ header {
 }
 header .inicio {
   font-size: 1.75rem;
-  color: #FFFFFF;
+  color: white;
 }
 header .tipo1 {
   font-size: 1.5rem;
@@ -65,17 +120,43 @@ body:not(.inicio) header a {
   margin: 0.625rem 0.625rem 0.625rem 0;
 }
 
+.boton {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 8px solid transparent;
+  background-color: #202020;
+  color: initial;
+}
+.boton:hover {
+  background-color: #0056b3;
+  color: white;
+  border-color: #FFFFFF;
+}
+.boton.inicio {
+  font-size: 24px;
+  color: white;
+}
+.boton.tipo2 {
+  font-size: 24px;
+  color: #FFDF61;
+}
+.boton.tipo3 {
+  font-size: 24px;
+  color: #B300FF;
+}
+.boton.otras {
+  font-size: 24px;
+  color: #40E0D0;
+}
+
 .contenido {
   margin: 20px 0 0 20px;
   padding-top: 20px;
-}
-
-.imagenKardashev {
-  width: 159px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0.625rem;
-  height: 240px;
 }
 
 .textoKardashev {
@@ -86,22 +167,58 @@ body:not(.inicio) header a {
   box-sizing: border-box;
 }
 
-body.horizontal header {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  flex-direction: row;
+.imagenCivilización4, .imagenCivilización5, .imagenTierra {
+  position: relative;
 }
 
-h1 {
-  font-size: 23px;
-  margin: 60px 0 40px 20px;
+.textoImagen {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  border-radius: 5px;
 }
 
-main p:not([class]) {
-  font-size: 22px;
-  margin: 0px 2.5rem 1.25rem;
+.imagenCivilización4 img, .imagenCivilización5 img, .imagenTierra img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.imagenCivilización4 img, .imagenCivilización5 img {
+  margin-bottom: 15px;
+}
+
+.imagenTierra {
+  grid-column: span 2;
+}
+
+.imagenTierra img {
+  margin-top: 15px;
+}
+
+.imagenCivilización4, .imagenCivilización5 {
+  grid-row: 1;
+}
+
+.imagenTierra {
+  grid-row: 2;
+}
+
+.imagenKardashev {
+  width: 159px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  height: 240px;
 }
 
 .imagenTipo1 img, .imagenTipo2 img, .imagenTipo3 img {
@@ -137,136 +254,16 @@ main p:not([class]) {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  grid-template-rows: auto auto; /* Dos filas automáticas */
-  gap: 20px; /* Espaciado entre las imágenes */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
   width: 100%;
   max-width: 600px;
   margin: auto;
 }
 
-.imagenCivilización4, .imagenCivilización5, .imagenTierra {
-  position: relative; /* Necesario para colocar el texto sobre las imágenes */
-}
-
-.textoImagen {
-  position: absolute; /* El texto se posiciona sobre la imagen */
-  top: 10px; /* Distancia desde la parte superior de la imagen */
-  left: 50%; /* Centrado horizontal */
-  transform: translateX(-50%); /* Ajuste para centrar perfectamente */
-  color: white; /* Color del texto */
-  font-size: 18px; /* Tamaño del texto */
-  font-weight: bold; /* Estilo en negrita */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar legibilidad */
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro para el texto */
-  padding: 5px;
-  border-radius: 5px;
-}
-
-/* Estilos para las imágenes, se ajustan a la pantalla */
-.imagenCivilización4 img, .imagenCivilización5 img, .imagenTierra img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border-radius: 10px;
-}
-
-.imagenCivilización4 img, .imagenCivilización5 img {
-  margin-bottom: 15px; /* Separa la imagen del texto debajo */
-}
-
-/* El contenedor de la Tierra ocupa ambas columnas */
-.imagenTierra {
-  grid-column: span 2; /* Ocupa ambas columnas */
-}
-
-.imagenTierra img {
-  margin-top: 15px; /* Ajusta el espacio si es necesario */
-}
-
-/* Ajustes para la imagen "Tierra" que hace que sea más grande */
-.imagenCivilización4, .imagenCivilización5 {
-  grid-row: 1; /* Coloca estas imágenes en la fila superior */
-}
-
-.imagenTierra {
-  grid-row: 2; /* Coloca la imagen de la Tierra en la fila inferior */
-}
-
-/* Mixin para los botones */
-.boton {
-  display: inline-block;
-  padding: 12px 20px;
-  margin: 10px 0;
-  text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  border: 8px solid transparent;
-  background-color: #202020;
-  color: initial;
-}
-.boton:hover {
-  background-color: #0056b3;
-  color: white;
-  border-color: #FFFFFF;
-}
-.boton.inicio {
-  font-size: 24px;
-  color: #FFFFFF;
-}
-.boton.tipo2 {
-  font-size: 24px;
-  color: #FFDF61;
-}
-.boton.tipo3 {
-  font-size: 24px;
-  color: #B300FF;
-}
-.boton.otras {
-  font-size: 24px;
-  color: #40E0D0;
-}
-
-@media only screen and (max-width: 800px) {
-  .imagentipo1, .imagenTipo2, .imagenTipo3 {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-  .imagentipo1 img, .imagenTipo2 img, .imagenTipo3 img {
-    max-width: 95%;
-    padding: 20px 0;
-  }
-}
-@media only screen and (max-width: 414px) {
-  /* Mantiene imagen arriba y texto abajo en imagenDeLado1 */
-  .imagenDeLado1 {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .imagenDeLado1 img {
-    width: 150px;
-    align-self: flex-start;
-  }
-  .imagenDeLado1 p {
-    font-size: 18px;
-    align-self: flex-start;
-  }
-  /* Asegura que en imagenDeLado2 la imagen esté arriba y el texto abajo */
-  .imagenDeLado2 {
-    flex-direction: column; /* Se mantiene en columna */
-    align-items: flex-start;
-  }
-  .imagenDeLado2 img {
-    width: 150px;
-    align-self: flex-start;
-    order: -1; /* Esto mueve la imagen arriba en el orden */
-  }
-  .imagenDeLado2 p {
-    font-size: 18px;
-    align-self: flex-start;
-  }
-}
+/*Se ha aplicado Responsive total a index.html, CivilizaciónTipo2.html, y CivilizaciónTipo3.html*/
+/*Los responsive de CivilizaciónTipo1.html y Otras.html se mantienen estables hasta los 600x1024px, 
+hacia abajo ciertas imagenes se agradan hasta los extremos de la pantalla. Deberá ser corregido a futuro.*/
 
 /*# sourceMappingURL=styles.css.map */

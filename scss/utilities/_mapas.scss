@@ -1,0 +1,11 @@
+$colors: (
+primary-bg: #0E0D13,
+secondary-bg: #202020,
+hover-bg: #0056b3,
+text-color: white,
+border-color: #FFFFFF
+);
+
+@function color($color-name) {
+@return map-get($colors, $color-name);
+}

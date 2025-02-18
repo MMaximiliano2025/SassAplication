@@ -1,0 +1,36 @@
+@media only screen and (max-width: 800px) {
+    .imagentipo1, .imagenTipo2, .imagenTipo3 {
+    img { max-width: 95%; padding: 20px 0; }
+    padding-left: 15%;
+    padding-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .imagenDeLado1 {
+    flex-direction: column;
+    align-items: flex-start;
+    img {
+        width: 150px;
+        align-self: flex-start;
+    }
+    p {
+        font-size: 18px;
+        align-self: flex-start;
+    }
+    }
+    .imagenDeLado2 {
+    flex-direction: column;
+    align-items: flex-start;
+
+    img {
+        width: 150px;
+        align-self: flex-start;
+        order: -1;
+    }
+    p {
+        font-size: 18px;
+        align-self: flex-start;
+    }
+    }
+}

@@ -1,0 +1,16 @@
+body {
+    background-color: color(primary-bg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: color(text-color);
+}
+
+h1 {
+    font-size: 23px;
+    margin: 60px 0 40px 20px;
+}
+main p:not([class]) {
+    font-size: 22px;
+    margin: 0px 2.5rem 1.25rem;
+}
