@@ -17,6 +17,39 @@ header a:hover {
   border-color: #FFFFFF;
 }
 
+@media only screen and (max-width: 600px) {
+  .imagenTipo1 img {
+    max-width: 80% !important;
+    height: auto !important;
+    object-fit: contain;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    max-width: 85% !important;
+    margin: 20px auto;
+  }
+  .imagenCivilización4, .imagenCivilización5, .imagenTierra {
+    padding: 10px;
+    object-fit: contain;
+    max-width: 95% !important;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .grid-container {
+    max-width: 90% !important;
+    margin: 10px auto;
+  }
+  .imagenCivilización4, .imagenCivilización5, .imagenTierra {
+    padding: 5px;
+    object-fit: contain;
+    max-width: 90% !important;
+    margin: 0 auto;
+  }
+}
 @media only screen and (max-width: 800px) {
   .imagentipo1, .imagenTipo2, .imagenTipo3 {
     padding-left: 15%;
@@ -83,7 +116,8 @@ body.horizontal header {
 header {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 1.25rem;
 }
 header .inicio {
@@ -109,15 +143,18 @@ header .otras {
 
 body.inicio header {
   flex-direction: column;
+  align-items: center;
 }
 
 body:not(.inicio) header {
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-body:not(.inicio) header a {
+
+a {
   display: inline-block;
-  margin: 0.625rem 0.625rem 0.625rem 0;
+  margin: 0.625rem;
 }
 
 .boton {
@@ -262,8 +299,6 @@ body:not(.inicio) header a {
   margin: auto;
 }
 
-/*Se ha aplicado Responsive total a index.html, CivilizaciónTipo2.html, y CivilizaciónTipo3.html*/
-/*Los responsive de CivilizaciónTipo1.html y Otras.html se mantienen estables hasta los 600x1024px, 
-hacia abajo ciertas imagenes se agradan hasta los extremos de la pantalla. Deberá ser corregido a futuro.*/
+/*Se ha aplicado Responsive total a index.html, CivilizaciónTipo2.html, CivilizaciónTipo3.html, CivilizaciónTipo1.html y Otras.html.*/
 
 /*# sourceMappingURL=styles.css.map */

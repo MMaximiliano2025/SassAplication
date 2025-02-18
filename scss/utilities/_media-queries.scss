@@ -1,3 +1,47 @@
+@media only screen and (max-width: 600px) {
+    .imagenTipo1 img {
+        max-width: 80% !important;  // Ajusta el tamaño para que sea más grande
+        height: auto !important;
+        object-fit: contain;
+        padding: 20px 0;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        max-width: 85% !important;  // Aumentamos un poco el ancho de la cuadrícula
+        margin: 20px auto;
+    }
+
+    .imagenCivilización4, .imagenCivilización5, .imagenTierra {
+        padding: 10px;
+        object-fit: contain;
+        max-width: 95% !important;  // Aumentamos un poco el tamaño de las imágenes
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .grid-container {
+        max-width: 90% !important;  // Ajustamos el ancho de la cuadrícula
+        margin: 10px auto;
+    }
+
+    .imagenCivilización4, .imagenCivilización5, .imagenTierra {
+        padding: 5px;
+        object-fit: contain;
+        max-width: 90% !important;  // Ajustamos el tamaño de las imágenes
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 800px) {
     .imagentipo1, .imagenTipo2, .imagenTipo3 {
     img { max-width: 95%; padding: 20px 0; }
