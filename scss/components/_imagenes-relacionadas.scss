@@ -1,44 +1,50 @@
-.imagenCivilización4, .imagenCivilización5, .imagenTierra {
-    position: relative;
+.imagenCivilización4,
+.imagenCivilización5,
+.imagenTierra {
+  position: relative;
 }
 
 .textoImagen {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 5px;
-    border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  border-radius: 5px;
 }
 
-.imagenCivilización4 img, .imagenCivilización5 img, .imagenTierra img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    border-radius: 10px;
+.imagenCivilización4 img,
+.imagenCivilización5 img,
+.imagenTierra img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
 }
 
-.imagenCivilización4 img, .imagenCivilización5 img {
-    margin-bottom: 15px;
+.imagenCivilización4 img,
+.imagenCivilización5 img {
+  margin-bottom: 15px;
 }
 .imagenTierra {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .imagenTierra img {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
-.imagenCivilización4, .imagenCivilización5 {
-    grid-row: 1;
+.imagenCivilización4,
+.imagenCivilización5 {
+  grid-row: 1;
 }
 
 .imagenTierra {
-    grid-row: 2;
+  grid-row: 2;
 }

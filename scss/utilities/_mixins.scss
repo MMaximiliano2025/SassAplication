@@ -1,29 +1,29 @@
 %base-boton {
-    display: inline-block;
-    padding: 12px 20px;
-    margin: 10px 0;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    border: 8px solid transparent;
-    background-color: color(secondary-bg);
-    color: initial;
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 8px solid transparent;
+  background-color: color(secondary-bg);
+  color: initial;
 
-    &:hover {
+  &:hover {
     background-color: color(hover-bg);
     color: color(text-color);
     border-color: color(border-color);
-    }
+  }
 }
 @mixin imagen-estilos($width: 200px) {
-    width: $width;
-    height: auto;
-    object-fit: cover;
-    border-radius: .625rem;
+  width: $width;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.625rem;
 }
 
 @mixin boton-estilos($color) {
-    font-size: 24px;
-    color: $color;
+  font-size: 24px;
+  color: $color;
 }

@@ -14,81 +14,80 @@ header a {
 header a:hover {
   background-color: #0056b3;
   color: white;
-  border-color: #FFFFFF;
+  border-color: #ffffff;
 }
 
 @media only screen and (max-width: 600px) {
   .imagenTipo1 img {
-    max-width: 80% !important;
-    height: auto !important;
+    max-width: 80%;
+    height: auto;
     object-fit: contain;
     padding: 20px 0;
     margin: 0 auto;
   }
-}
-@media only screen and (max-width: 600px) {
-  .grid-container {
-    max-width: 85% !important;
+  .gridContainer {
+    max-width: 85%;
     margin: 20px auto;
   }
-  .imagenCivilización4, .imagenCivilización5, .imagenTierra {
+  .imagenCivilización4,
+  .imagenCivilización5,
+  .imagenTierra {
     padding: 10px;
     object-fit: contain;
-    max-width: 95% !important;
+    max-width: 95%;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 320px) {
-  .grid-container {
-    max-width: 90% !important;
+  .gridContainer {
+    max-width: 90%;
     margin: 10px auto;
   }
-  .imagenCivilización4, .imagenCivilización5, .imagenTierra {
+  .imagenCivilización4,
+  .imagenCivilización5,
+  .imagenTierra {
     padding: 5px;
     object-fit: contain;
-    max-width: 90% !important;
+    max-width: 90%;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 800px) {
-  .imagentipo1, .imagenTipo2, .imagenTipo3 {
+  .imagenTipo1,
+  .imagenTipo2,
+  .imagenTipo3 {
     padding-left: 15%;
     padding-right: 15%;
   }
-  .imagentipo1 img, .imagenTipo2 img, .imagenTipo3 img {
+  .imagenTipo1 img,
+  .imagenTipo2 img,
+  .imagenTipo3 img {
     max-width: 95%;
     padding: 20px 0;
   }
 }
 @media only screen and (max-width: 414px) {
-  .imagenDeLado1 {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .imagenDeLado1 img {
-    width: 150px;
-    align-self: flex-start;
-  }
-  .imagenDeLado1 p {
-    font-size: 18px;
-    align-self: flex-start;
-  }
+  .imagenDeLado1,
   .imagenDeLado2 {
     flex-direction: column;
     align-items: flex-start;
   }
+  .imagenDeLado1 img,
   .imagenDeLado2 img {
     width: 150px;
     align-self: flex-start;
-    order: -1;
   }
+  .imagenDeLado1 p,
   .imagenDeLado2 p {
     font-size: 18px;
     align-self: flex-start;
   }
+  .imagenDeLado2 img {
+    order: -1;
+  }
 }
 body {
-  background-color: #0E0D13;
+  background-color: #0e0d13;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -126,19 +125,19 @@ header .inicio {
 }
 header .tipo1 {
   font-size: 1.5rem;
-  color: #00BFFF;
+  color: #00bfff;
 }
 header .tipo2 {
   font-size: 1.5rem;
-  color: #FFDF61;
+  color: #ffdf61;
 }
 header .tipo3 {
   font-size: 1.5rem;
-  color: #B300FF;
+  color: #b300ff;
 }
 header .otras {
   font-size: 1.5rem;
-  color: #40E0D0;
+  color: #40e0d0;
 }
 
 body.inicio header {
@@ -172,7 +171,7 @@ a {
 .boton:hover {
   background-color: #0056b3;
   color: white;
-  border-color: #FFFFFF;
+  border-color: #ffffff;
 }
 .boton.inicio {
   font-size: 24px;
@@ -180,15 +179,15 @@ a {
 }
 .boton.tipo2 {
   font-size: 24px;
-  color: #FFDF61;
+  color: #ffdf61;
 }
 .boton.tipo3 {
   font-size: 24px;
-  color: #B300FF;
+  color: #b300ff;
 }
 .boton.otras {
   font-size: 24px;
-  color: #40E0D0;
+  color: #40e0d0;
 }
 
 .contenido {
@@ -204,7 +203,9 @@ a {
   box-sizing: border-box;
 }
 
-.imagenCivilización4, .imagenCivilización5, .imagenTierra {
+.imagenCivilización4,
+.imagenCivilización5,
+.imagenTierra {
   position: relative;
 }
 
@@ -222,7 +223,9 @@ a {
   border-radius: 5px;
 }
 
-.imagenCivilización4 img, .imagenCivilización5 img, .imagenTierra img {
+.imagenCivilización4 img,
+.imagenCivilización5 img,
+.imagenTierra img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -230,7 +233,8 @@ a {
   border-radius: 10px;
 }
 
-.imagenCivilización4 img, .imagenCivilización5 img {
+.imagenCivilización4 img,
+.imagenCivilización5 img {
   margin-bottom: 15px;
 }
 
@@ -242,7 +246,8 @@ a {
   margin-top: 15px;
 }
 
-.imagenCivilización4, .imagenCivilización5 {
+.imagenCivilización4,
+.imagenCivilización5 {
   grid-row: 1;
 }
 
@@ -258,7 +263,9 @@ a {
   height: 240px;
 }
 
-.imagenTipo1 img, .imagenTipo2 img, .imagenTipo3 img {
+.imagenTipo1 img,
+.imagenTipo2 img,
+.imagenTipo3 img {
   width: 100%;
   max-width: 600px;
   height: auto;
@@ -268,7 +275,9 @@ a {
   padding: 40px 0;
 }
 
-.imagenDeLado, .imagenDeLado1, .imagenDeLado2 {
+.imagenDeLado,
+.imagenDeLado1,
+.imagenDeLado2 {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -276,20 +285,24 @@ a {
   padding-top: 10px;
   flex-wrap: wrap;
 }
-.imagenDeLado img, .imagenDeLado1 img, .imagenDeLado2 img {
+.imagenDeLado img,
+.imagenDeLado1 img,
+.imagenDeLado2 img {
   width: 200px;
   height: auto;
   object-fit: cover;
   border-radius: 0.625rem;
 }
-.imagenDeLado p, .imagenDeLado1 p, .imagenDeLado2 p {
+.imagenDeLado p,
+.imagenDeLado1 p,
+.imagenDeLado2 p {
   flex: 1;
   font-size: 22px;
   line-height: 1.6;
   margin: 0;
 }
 
-.grid-container {
+.gridContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
