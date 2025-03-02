@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) {
   .imagenTipo1 {
     img {
-      max-width: 80%; // Ajusta el tamaño para que sea más grande
+      max-width: 80%;
       height: auto;
       object-fit: contain;
       padding: 20px 0;
@@ -10,7 +10,7 @@
   }
 
   .gridContainer {
-    max-width: 85%; // Aumentamos un poco el ancho de la cuadrícula
+    max-width: 85%;
     margin: 20px auto;
   }
 
@@ -19,14 +19,14 @@
   .imagenTierra {
     padding: 10px;
     object-fit: contain;
-    max-width: 95%; // Aumentamos un poco el tamaño de las imágenes
+    max-width: 95%;
     margin: 0 auto;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .gridContainer {
-    max-width: 90%; // Ajustamos el ancho de la cuadrícula
+    max-width: 90%;
     margin: 10px auto;
   }
 
@@ -35,7 +35,7 @@
   .imagenTierra {
     padding: 5px;
     object-fit: contain;
-    max-width: 90%; // Ajustamos el tamaño de las imágenes
+    max-width: 90%;
     margin: 0 auto;
   }
 }
@@ -71,6 +71,6 @@
   }
 
   .imagenDeLado2 img {
-    order: -1; // Solo para .imagenDeLado2
+    order: -1;
   }
 }
